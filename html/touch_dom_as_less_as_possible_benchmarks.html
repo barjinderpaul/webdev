@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Benchmarking</title>
+        <style>
+            *{
+                font-family: inherit;
+                font-size:20pt;
+            }
+            #one-by-one {
+                font-size: 100pt;  
+            }
+
+            #all-at-once{
+                font-size:100pt;
+            }
+
+            #append-child {
+                font-size:100pt;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <ul id="list1">
+
+        </ul>
+        <br>
+        <p id = "one-by-one"></p>
+        <br>
+        <ul id="list2">
+
+        </ul>
+        <p id = "all-at-once"></p>
+        <br>
+        <ul id="list3">
+
+        </ul>
+        <p id="append-child"></p>
+        <script>
+            let unordered_list1 = document.getElementById('list1');
+            let unordered_list2 = document.getElementById('list2'); 
+            let unordered_list3 = document.getElementById('list3');
+            let oneByOneText = document.getElementById('one-by-one');
+            let allAtOnceText = document.getElementById('all-at-once');
+            let appendChildText = document.getElementById('append-child');
+            let startTime = new Date().getTime();
+            for(let i=1;i<=2000;i++){
+                let string = "";
+                if(i%2==0){
+                    string="even";
+                }
+                else{
+                    string = "odd";
+                }
+                unordered_list1.innerHTML+='<li>' + string + '</li>';
+            }
+            let endTime = new Date().getTime();
+            oneByOneText.innerText = (endTime-startTime);
+
+            //Adding elements at once;
+            startTime = new Date().getTime();
+            let allElements = "";
+            for(let i=1;i<=2000;i+=1){
+                if(i%2==0){
+                    allElements+='<li> even </li>';
+                }
+                else{
+                    allElements+='<li> odd </li>';
+                }
+            }
+            unordered_list2.innerHTML+=allElements;
+            endTime = new Date().getTime();
+            allAtOnceText.innerText = (endTime-startTime);
+
+            //appending child instead of setting inner html every time;
+            startTime = new Date().getTime();
+            for(let i=1;i<=2000;i+=1){
+                let newItem = document.createElement('li');
+                if(i%2==0){
+                    newItem.innerText = "even";
+                }
+                else{
+                    newItem.innerText  = "odd";
+                }
+                unordered_list3.appendChild(newItem);
+            }
+            endTime = new Date().getTime();
+            appendChildText.innerText = (endTime-startTime);       
+            
+            /*Append child is faster than all   */
+
+        </script>
+    </body>
+    
+</html>
