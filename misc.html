@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Misc</title>
+        <style>
+            *{
+                font-family: inherit;
+                font-size: 20pt;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type="text" id = "todo"> <button id="btn">Greet</button>
+        <br>
+
+        <ul id = "todolist">
+            <li>First Item</li>
+        </ul>
+
+        <script>
+            let todoList = document.getElementById('todolist');
+            let todoBox = document.getElementById('todo');
+            let greetBtn = document.getElementById('btn');
+            btn.onclick = ()=>{
+                let todo  =todoBox.value;
+                let newLi = document.createElement('li');
+                newLi.innerText = todo;
+                todoList.appendChild(newLi);
+                todoBox.value="";
+            }
+        </script>
+    </body>
+</html>
