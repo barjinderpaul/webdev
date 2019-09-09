@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--Image here-->
+    <img src="fullNameOfTheFile.extensionofThefile" alt="if image is not displayed">
+    <br><br>
+    <!-- Set only either of width or height, else image might get distorted -->
+    <img src="sameHere.jpg" alt="sameHere" width="200" height="50">
+    <br><br>
+    <!--Video-->
+    <video src="fullName.extension" controls></video>
+    <br><br>
+    <video src="fullName.extension" controls autoplay></video>
+
+    <!-- Dont do this :p -->
+    <video src="fullName.extension" autoplay></video>
+
+    <video src="fullName.extension" controls autoplay loop></video>
+    
+    <!-- Automatic buffering of video starts in auto -->
+    <video src="fullName.extension" preload="auto"></video>
+    <br>
+
+    <!--Only thumbnail and video length is displayed-->
+    <video src="fullName.extension" preload="meta"></video>
+    <br>
+
+    <!--When 'none' is selected, nothing is applied on webpage not even thumbnail-->
+    <video src="fullName.extension" preload="none"></video>
+
+    <br><br>
+    <audio controls src="fullname.extension" ></audio>
+    <br><br>
+
+    <!-- if we want background audio even if user does not does anything -->
+    <audio src="fileName.extension" autoplay loop></audio>
+</body>
+</html>
