@@ -1,0 +1,30 @@
+
+/*
+    *margin-area gets the color from parent element
+    *margin is outside the element
+    
+    *padding is inside the element and takes the color from the element itself
+    
+    *border makes his own space inside margin but outside;
+    *Border takes up space from the element space itself. 
+    *If element space is 20px and border takes 1px, then the element will remain only with 19px space;
+*/
+
+.box{
+    margin:20px;
+    padding:20px;
+    border:solid black 0.2px;
+}
+
+
+#div1 {
+    background-color: lightgreen;
+}
+
+#div2 {
+    background-color:lightcoral;
+}
+
+#div3 {
+    background-color:lightsalmon;
+}
