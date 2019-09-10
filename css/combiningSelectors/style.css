@@ -1,0 +1,47 @@
+/*
+    Combining different selectors;
+    A>B = B is directly inside A i.e., direct child
+     A B = B is a descendant of A
+*/
+
+li {
+    font-weight: bold;
+}
+
+/* A>B = B is directly inside A i.e., direct child */
+
+ul > li {
+    color:blue;
+}
+
+ol > li {
+    color:red;
+}
+
+/* A B = B is a descendant of A*/
+ul ul {
+    font-style: italic
+}
+
+
+ul li > li {
+    font-style: italic
+}
+
+/* A + B = A and B needs to be direct sibling; i.e., B should come just after A in HTML*/
+ol + ul {
+    background-color:green;
+}
+
+/* A~B = A and B needs to be siblings i.e., B should come after A not just after*/
+ol ~ ul {
+    background-color: grey;
+}
+
+ol ol li {
+    display: none;
+}
+
+ol :hover li {
+    display:block;
+}
