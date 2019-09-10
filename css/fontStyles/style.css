@@ -1,0 +1,37 @@
+/*
+    ------Font-Types-----
+    *pt for type writers;
+    *em is width of the character 'm' in default font size;
+    'm' is choosen because it is the widest english character;
+
+    *vh is the height of the window as well.
+    1vh is 1/100 of window height.
+    changes according to the window size.
+
+    *vw is the width of the window as well.
+
+    ------FONTS-------
+    *monospace font means all character will takes same width
+    *sans-serif font ; sans mean without and serif means tips outside of each character
+    *multiple fonts means it will apply first, if first available then second one and it continues;
+*/
+#para1 {
+    font-size : 3vh;
+    font-family: monospace;
+    font-style: lighter;
+}
+
+#para2 {
+    font-size:2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#para3 {
+    font-style: italic;
+    font-weight: bolder /*some fonts support bolder as well*/;
+}
+
+#para4 {
+    word-spacing:10px;
+    letter-spacing:2px;
+}
