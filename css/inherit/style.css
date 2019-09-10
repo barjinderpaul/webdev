@@ -1,0 +1,29 @@
+/*
+   *precedence of #id > precedence of .class > precedence of element >  precedence of *
+     It can be verified from Developer tools in the elements->style window.
+   *In case of duplicate properties for the same element, top down approach is followed
+   *Relative path css vs css in head tag depends on the order they're written;Follows top down approach;
+   *Inline style css overrides every other css.
+*/
+
+
+
+.cl2 {
+    background-color: pink;
+}
+
+div {
+    background-color : blue;
+}
+
+.cl1 {
+    background-color:lightcoral;
+}
+
+#id1 {
+    background-color:red;
+}
+
+* {
+    background-color: white;
+}
