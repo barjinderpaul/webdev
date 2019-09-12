@@ -1,0 +1,41 @@
+#unordered-list {
+    background-color:blue;
+    margin:10px;
+    padding:10px;
+    color:white;
+    border:5px black solid;
+}
+div > div {
+    margin:10px;
+    padding:10px;
+    background-color:lightskyblue;
+    border:5px black dashed;    
+    color:black
+}
+
+div > div div {
+    margin:10px;
+    padding:10px;
+    border : 3px black dashed;
+    background-color:lightblue;
+    color:brown;
+}
+
+div div div {
+    display: none;
+}
+/*
+div div {
+    display:none;
+}
+
+div :hover + div{
+    display:block;
+}
+*/
+div div:hover div {
+    display: block;
+    background: black;
+    color:white;
+    border:white 2px dashed;
+}
