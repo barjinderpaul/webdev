@@ -1,0 +1,35 @@
+*{
+    color: darkblue;
+}
+
+body{
+    color: black;
+}
+
+h5 {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color:red;
+}
+
+#details {
+    border: 2px black dotted;
+
+}
+
+#startingCSS { 
+    border: black 2px dotted;
+    padding:10px;
+}
+
+
+#table {
+    border: 2px solid black;
+
+}

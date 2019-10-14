@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="revision_oct.css">
+</head>
+<body>
+    <h2>Enter your details</h2>
+    <p>This is just a <i>sample form</i></p>
+    Username : <input type="text" name="username" id="name" placeholder="Enter your name">
+    <br><br>
+    Password : <input type="password" name="password" id="password" placeholder="Enter your password">
+    <br><br>
+    <h5>Select Gender : </h5>
+    <input type="radio" name="gender" id="male" value="male">Male
+    <input type="radio" name="gender" id="female" value="female">Female
+    <br><br>
+    <h5>Enter your date of birth : </h5>
+    <input type="Date" id = "dob">
+    <br><br>
+    <h5>Select any one option : </h5>
+    <select name="options" id="selectOptions">
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+    </select>
+    <br><br>
+    <h5>Select multiple options : </h5>
+    <input type="checkbox" name="multiple" value="option1" id="option1">Option 1
+    <input type="checkbox" name="multiple" id="option2" value="option2">Option 2
+    <br><br>
+    <button  onclick="display()">Submit</button>
+    <br><br><hr>
+    <h4>Some links that you can visit</h4>
+    <span>Open Google : </span><a href="https://www.google.com">Google</a>
+    <br>    <br>
+    <span>mail me : </span><a href="mailto:mailme@gmail.com">Male someone!</a>
+    <br><br>
+    <span>Call me : </span><a href="tel:+12345678">Call someone!</a>
+
+    <hr><hr>
+
+    <div id="details">
+        <p>You will see your details here</p>
+    </div>
+
+    <p id="pTag" onclick="display()">Details</p>
+
+    <h4>Tables</h4>
+    <table id="table">
+        <th>Hello</th>
+        <tr>
+            <td>Hello</td>
+            <td>Another hello</td>
+            <td>Another another task</td>
+        </tr>
+    </table>
+    
+    <br><hr><hr><br>
+    <p id = "startingCSS"> Playing with some CSS</p>
+
+
+    <script src="revision_oct.js"></script>
+</body>
+
+</html>
