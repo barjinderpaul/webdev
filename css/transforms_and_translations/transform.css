@@ -1,0 +1,19 @@
+#div1{
+    border: 2px solid black;
+    height: 70px;
+    width: 70px;
+    background-color: orange;
+    margin : 40px;
+    /*
+    Transform
+        1. translate(x,y) from left and from above; can also be negative;
+    */
+    
+    /* transform : translate(30px,30px); */
+    /* transform : scale(1.2); Scales from center */
+    /* Skewing is changing angle w.r.t. xdeg or ydeg */
+    /* transform : skew(30deg,0); skew(xdeg,y) || skey(x,ydeg);  */
+    /* transform: rotate(45deg); By default it is rotateZ() */
+    /*rotateX and scaleY do the same thing*/
+    
+}

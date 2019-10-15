@@ -1,0 +1,51 @@
+
+
+    /* position:static; */ /*position:static is the default*/
+    /* position: relative; */
+    /* position:fixed; */
+    /* position: absolute; */
+
+    /* With relative positioning, we can adjust the position of the element we want; */
+    
+    /* 
+        If position:fixed, then the element on which it is applied remains on the same 
+        position even if we scroll the web page. 
+    */
+
+    /* 
+        Position:absolute works with the nearest ancestor that had the property : (fixed || or anything ) 
+        If no element had a property = position : fixed, then we have the "Window" which has the property;
+        position:fixed;
+    */
+
+    /* 
+        position : sticky; the element on which it is used sticks to it's position even if the page is scrolled;
+    */
+
+
+
+div {
+    background-color: lightcyan;
+    border:5px solid black;
+    margin:15px;
+    padding:15px;
+}
+
+#div2 {
+    position:fixed;
+    bottom:500px;
+}
+
+#div3 {
+    position:absolute;
+}
+
+#div4 {
+    position: static;
+    margin : 30px;
+    bottom : 20px;
+}
+
+#div5 {
+    position:absolute;
+}

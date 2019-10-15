@@ -1,0 +1,45 @@
+#div1 {
+    background-color: red;
+    height : 80px;
+    width: 80px;
+    margin:100px;
+}
+
+#div1:hover{
+    background-color: blue;
+    height : 40px;
+    width: 120px;
+    transition: height 1s, background 4s, width 1s;
+}
+
+#div2 {
+    background: darkblue;
+    height : 50px;
+    width: 50px;
+}
+
+div:hover + div {
+    margin-left : 100px;
+    margin-top : 150px;
+    transition: margin 3s;
+}
+
+
+#div3{
+    margin : 10px;
+    background-color: black;
+    height:50px;
+    width:50px;
+}
+
+#div4 {
+    margin : 10px;
+    background-color : orange;
+    height: 50px;
+    width: 50px;
+}
+
+#div4:hover{
+    transform: translate(60px,60px);
+    transition : transform 1s;
+}
