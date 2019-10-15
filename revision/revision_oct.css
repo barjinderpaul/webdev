@@ -123,3 +123,8 @@ ul:hover ol > li{
 ol:hover ul > li{
     display: block;
 }
+
+/*pseudo selectors*/
+p::first-line{
+    color:orange;
+}
