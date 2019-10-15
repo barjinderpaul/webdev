@@ -61,7 +61,7 @@
     <br><hr><hr><br>
     <p id = "startingCSS"> Playing with some CSS</p>
 
-    <div id="div1">
+    <div id="div1" style="color:white;">
         <p>This has id = div1</p>
         <div id="div2">
             <p>This has id = div2</p>
@@ -71,6 +71,77 @@
         </div>
     </div>
 
+    <p>Playing with font, font-size, precedence of css</p>
+
+    <p id = "paraCSS">I will apply CSS here</p>
+
+    <p id = "fontSizeVH">The font-size is 5vh</p>
+    <p id = "fontSizeVW">The font-size is 5vw</p>
+
+    <hr><hr>
+    <br><br>
+    <p>Playing with Combining selectors</p>
+
+    <p>Lists having relation A > B i.e., B is direct child of A</p>
+    <ul >
+        <li>one</li>
+        <li>Two</li>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+        </ol>
+    </ul>
+    <br><br>
+    <p>Combinator A B = B is descendent of A</p>
+    <div id ="spanDiv">
+        <span>I am a 'space' Combinator</span>
+        <p>Not a 'space' Combinator</p>
+        <span>I ama a 'space' Combinator</span>
+        <div id ="spanDiv2">
+            <span>I am inside spanDiv2 with a 'space' combinator</span>
+        </div>
+    </div>
+
+    <br><br>
+
+    <p>
+        Combinator A~B = A and B are siblings and B will follow A somewhere down not immediately and share
+        the same parent
+    </p>
+
+    <div id="tildeCombinatorDiv">
+        <p>I am the sibling</p>
+        <h2>I am not the sibling</h2>
+        <span>I am the sibling of p</span>
+        <h4>I am not the sibling</h4>
+        <span>I am the sibling</span>
+    </div>
+
+    <br><br>
+    <p>
+        Combinator A+B = B is adjacent sibling to A and comes directly after A;
+    </p>
+    <div id = "plusCombinatorDiv">
+        <p>Span is my direct sibling</p>
+        <span>I am in relation with p-tag via + combinator</span>
+        <p>I am individual</p>
+        <h5>Heading5</h5>
+        <span>I am not a sibling because I am not an adjacent sibling to p for A+B to work</span>
+    </div>
+
+    <p>Playing with Hovers</p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <ul>
+                <li>1st</li>
+                <li>2nd</li>
+            </ul>
+        </ol>
+    </ul>
     <script src="revision_oct.js"></script>
 </body>
 

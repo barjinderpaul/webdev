@@ -53,3 +53,73 @@ span {
     background-color: skyblue;
  
 }
+
+/*
+    CSS with # v/s CSS with tag name
+    Precedence of CSS with # > CSS with . > CSS with tagName > CSS with *
+*/
+#paraCSS {
+    color : red;
+}
+
+
+
+#fontSizeVH{ 
+    font-size: 5vh;
+}
+
+#fontSizeVW {
+    font-size : 5vw;
+}
+
+#spanDiv {
+    border: 2px solid black;
+}
+
+#spanDiv2 {
+    padding:10px;
+    border: 0.5px solid black;
+}
+
+ul > li {
+    color:green;
+}
+
+ul ol > li {
+    color:red;
+}
+
+div span {
+    color : red;
+}
+
+#tildeCombinatorDiv{
+    border : 2px solid black;
+}
+
+p ~ span {
+    color:green;
+}
+
+#plusCombinatorDiv{
+    border:2px solid black;
+}
+
+p + span {
+    color:violet;
+}
+
+ol > li {
+    display: none;
+}
+ol ul > li{
+    display: none;
+}
+
+ul:hover ol > li{
+    display: block;
+}
+
+ol:hover ul > li{
+    display: block;
+}
