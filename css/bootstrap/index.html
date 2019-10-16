@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        .lipsum {
+            padding:10px;
+        }
+        .item {
+            border:2px solid black
+        }
+    </style>
+</head>
+<body> 
+    <!-- 
+        If we use bootstrap CDN, we are avoiding the downloading the bootstrap CSS from 
+        our server. because if we are using CDN, the bootstrap CSS file will be downloaded from
+        the bootstrap server and not from ours.
+    -->
+    <!-- Because of bootstrap's layouts or containers, we need not to use flexboxes or media queries. -->
+    <h1 class="text-center">Heading 1</h1>
+    <p>This is a para</p>
+    <button>This is a button</button>
+    <input type="text" name="name" id="name" placeholder="Username">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae velit aliquam deleniti aliquid? Tempore amet, voluptatibus ipsa asperiores tenetur, nesciunt eveniet quod aliquam obcaecati tempora, neque rerum rem nisi natus!Lorem</div>
+            
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, saepe facilis magnam aliquid architecto, sunt corrupti ad nesciunt, assumenda fuga delectus recusandae commodi id obcaecati sapiente. Consectetur amet at laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi necessitatibus, dignissimos in, veniam exercitationem porro ut sapiente culpa aliquam quas cum voluptatem molestias autem iste veritatis ipsum, corporis praesentium voluptate?</div>
+            
+            
+        </div>    
+            <div class="row">
+                <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, repellat. Sed sequi quae, modi repellat quisquam eius accusamus asperiores temporibus et suscipit odit error, corporis quos incidunt accusantium molestias nulla! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quo expedita quibusdam dolores sunt ipsa laboriosam ab commodi quas dolore dolorem veritatis, nihil cupiditate. Perspiciatis tenetur ipsa iure ratione omnis.</div>
+            </div>
+    </div>
+    <br><br>
+    <p><b> 
+        <!-- Every row is divided into 12 columns -->
+        Bootstrap breakpoints := <br>
+        xs (col-) = ExtraSmall : &lt; 576; <br>
+        sm = Small : 576px ,    <br>
+        md = Medium: 768px ,    <br>
+        lg = Large:  990   <br>
+        xl = ExtraLarge : 1200 
+    </b></p>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-6 item">One</div>
+        <div class="col-md-2 col-sm-4 col-6 item">Two</div>
+        <div class="col-md-4 col-sm-4 col-6 item">Three</div>
+        <div class="col-md-2 col-sm-4 col-6 item">Four</div>
+        <div class="col-md-4 col-sm-4 col-6 item">Five</div>
+        <div class="col-md-2 col-sm-4 col-6 item">Six</div>
+
+    </div>
+    <br>
+    <!-- 
+        REQUIREMENT - Assign the middle column space = 5/12
+        So, what we do is that, we assign the middle column col-5
+        and rest columns we assign only 'col' class;
+        We use this way when we want to automatically space up other columns
+        if anyone is set to specific.
+    -->
+    <div class="row">
+        <div class="col item">One</div>
+        <div class="col-5 item">Two</div>
+        <div class="col item">Three</div>
+    </div>
+    <hr>
+    <h5>Buttons</h5>
+    <button class="btn btn-info">Button</button>
+    <button class="btn btn-default">Button2</button>
+    <button class="btn btn-outline-primary">Button Outline</button>
+    <input type="text" placeholder="Username">
+
+    <!-- Bootstrap Components -->
+    <h4>Bootstrap components</h4>
+</body>
+</html>
