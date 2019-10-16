@@ -1,0 +1,82 @@
+.container {
+    height: 600px;
+    background-color: lightseagreen;
+
+    /* When flex is applied on a container, elements in it are aligned alongside each other */
+    display: flex;
+    /* flex-direction: row-reverse; right to left */
+    /* flex-direction: column-reverse; bottom up */
+    flex-direction: row; /*By default*/
+    flex-wrap : wrap;
+    justify-content: space-around; /*flext-start is default*/
+    
+    /* Flexbox, when set to row assign content in direction = -->
+        Justify assigns content in direction =  <--->
+        align-item assigns content in direction = ^ (up 
+                                                  | down basically)
+                                                  
+    */
+    align-items: center;
+    align-content: center;    
+    
+}
+
+.item {
+    background-color: lightblue;
+    margin: 20px;
+    height: 60px;
+    width: 30px;
+    padding: 10px;
+    font-size: 30px;
+    /* with flex-grow, elements takes up whatever space they have with them
+       with flex-shrink, an element can be set to not to shrink when all other elements are shrinking,
+       -> used with mostly with nowrap;
+    */
+    flex-grow: 1;
+    
+}
+
+/* 
+    Applying order makes elements appear at last;
+    -ve order makes elements appear at first;
+    when order is same, elements appear with respect to their position in html;
+*/
+#item2 {
+    order:1;
+}
+
+#item1 {
+    order:2;
+}
+
+
+
+/* Div2 - Flexbox */
+.container2 {
+    display: flex;
+    background-color:black;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item1 {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.container2:hover {
+    background-color:darkgreen;
+}
+.container2:hover div{
+    background-color: black;
+    transform: scale(1.1);
+    color:white;
+}
+

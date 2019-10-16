@@ -1,0 +1,70 @@
+#samplediv {
+    height: 300px;
+    width: 1920px;
+    background-color:indianred;
+}
+
+/* Points to remember */
+/* media means the device on which you are browsing */
+/* 
+    Make sure you write @media queries with decreasing screen sizes else, the CSS will follow top-down approach 
+    Other, go around is that you can write both max-width and min-width media querie with 'and' property;
+*/
+/* need not to write entire css of an element in media query because if not written, it will take the default CSS for it */
+
+@media (max-width:1920px) and (min-width:150px){
+    #samplediv {
+        background-color: purple;
+    }
+    #samplediv:hover {
+        background-color:orange;
+    }
+
+}
+
+@media (max-width:1500px) and (min-width:1000px) {
+    #samplediv {
+        width: 800px;
+        background-color: black;
+    }
+}
+
+@media (max-width:1000px){
+    #samplediv {
+        width: 400px;
+        background-color: blue;
+    }
+}
+
+@media (max-width:750px){
+    #samplediv {
+        width: 200px;
+        background-color: green;
+    }
+    #samplediv:hover {
+        background-color: black;
+    }
+}
+
+@media (max-width:500px){
+    #samplediv {
+        width: 100px;
+        background-color: orange;
+    }
+}
+
+
+/* when targetting mobile devices */
+@media (min-width:720px) and (orientation:landscape){
+    /* When screen is in landscape mode and on mobile */
+}
+@media (min-width:720px) and(orientation:portrait){
+    /* When screen is in portrait mode and on mobile */
+}
+
+/* Screens which does not support colors like black and white printers */
+@media (not (color)){
+    #samplediv {
+        background-color: gray;
+    }
+}
