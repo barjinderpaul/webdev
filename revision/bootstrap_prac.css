@@ -1,0 +1,12 @@
+.customItem {
+    border: 1px black solid;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: ;
+}
+
+.customDiv {
+    border: 2px black dotted;
+}
