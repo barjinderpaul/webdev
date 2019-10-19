@@ -1,2 +1,16 @@
 Execution :
-    
+    Interpreted language; Goes line by line;
+    Javascript's interpretor for PC = NodeJS;
+    Can run .js files on PC via NodeJS and in browsers via browser's javascript interpretor which is Console;
+
+Debugging: 
+    We can do debugging in an tool of our choice.
+    Also, we can do debugging in the browser itself; => Open Developer tools, gogo to Debugger tab and start debugging.
+
+Comments: 
+    //Single line comment;
+    /*Multi-line comment*/
+
+Semicolon is one's preference;
+
+ES6 introduces two new variables declarations : 'let' and 'const';  Before it, only var was available;
