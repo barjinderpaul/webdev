@@ -44,3 +44,67 @@ function a() {
         //variables of function 'a' are still accessable to function 'b' due to closure scope;
     }
 }
+
+arr.sort() is a higher order function because it can take a function as an argument; 
+
+console.log(arr.sort((a,b)=>{
+    return a-b;
+}))
+
+Functional Programming;
+1. Map function;
+
+What map does it is that it takes a function as an argument, and then it
+takes each item of the array on which it is applied and passes it through that function 
+and creates a new array of the same size;
+
+// squaring;
+arr = [1, 2, 3, 4, 5]
+let sqaured = arr.map((item) => item * item);
+console.log(sqaured);
+// OR;
+function Square(item) {
+    return item * item;
+}
+let squared2 = arr.map(Square);
+console.log(squared2)
+
+2. Filter function;
+
+Creates an empty array;
+Iterates over the array on which it is applied;
+if the condition mentioned in the function is true, it is passed down to newly created array, else ignored;
+return the newly created array;
+
+
+arr = [01,12,23,4,5,16];
+let greaterThanTen = arr.filter( (item) => {
+    return item > 10;
+})
+console.log(greaterThanTen)
+
+// Or;
+function greaterThanTenFun(item) {
+    return item > 10;
+}
+
+let greaterThanTen2 = arr.filter(greaterThanTenFun);
+console.log(greaterThanTen2)
+
+
+3. Reduce function;
+
+What reduce does is that :
+it's argument function takes 2 arguments;
+first argument is called accumulator, it initially holds the first element of the array/data passed;
+it starts iterating the array/data from the second element;
+then, it applies the operation on accumulator(firstElement of data) and secondElement of data (if exists),
+and stores the result in accumulator and item is iterated to the next item of the array/data;
+This continue till the end of the array/data and at last accumulator is returned;
+
+arr = [1,2,3,4,5,6,7,8]
+let sum = arr.reduce( (accum,item) => {
+    return accum + item
+})
+
+console.log(sum)
