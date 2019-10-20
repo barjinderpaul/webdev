@@ -110,3 +110,70 @@ console.log(url.split('='));
 
 //Getting video part from URL;
 console.log(url.split('=')[1]);
+
+//1d arrays;
+let arr = [1,2,3,4];
+console.log(arr.join("-"));
+
+//2d Arrays;
+let arr2d = [[1,2],[2,3],[3,4]];
+console.log(arr2d[1][1]);
+
+// Scopes in JS;
+console.log()
+var x = 10;
+function foo() {
+    x += 1;
+}
+foo();
+console.log(x);
+
+console.log()
+
+// No change to 'y' declared outside function
+var y = 10;
+function foo2(){
+    var y = 20;
+    y+=1;
+    console.log(y);
+}
+foo2();
+console.log(y);
+
+console.log();
+
+// Example showing var does not allow block scoping;
+
+var z = 10;
+function foo3(){
+    var z = 20;
+    z+=1;
+    console.log("Line 149 " + z);
+    if(true){
+        var z = 30;
+        z+=1;
+        console.log("line 153 " + z );
+    }
+    console.log("line 155 "+ z);
+}
+foo3();
+console.log("line 158 " + z);
+
+
+console.log()
+
+// checking scope of const;
+
+const m = 10;
+function foo4(){
+    const m = 20;
+    console.log(`Line 170 - ${m}`);
+    if(true){
+        const m = 30;
+        console.log(`Line 173 ${m}`);
+    }
+    console.log(`Line 175 - ${m}`);
+}
+
+foo4();
+console.log(`Line 177 ${m}`);
