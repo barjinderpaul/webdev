@@ -14,3 +14,46 @@ Comments:
 Semicolon is one's preference;
 
 ES6 introduces two new variables declarations : 'let' and 'const';  Before it, only var was available;
+
+In JS, variables do not have type like other languages such as C++ has variable types such as:
+    C++ -> int a = 10; and then we can only store integer type data in variable a;
+    But in,
+    JS -> let a = 10; JS gives us the ability to store string as well as in 'a';
+    Thus, JS is not a typesafe language.
+
+In JS, data has types -> we can check type of any data with typeof operator;
+
+data types are returned as strings => "number", "string", "boolean", "object", "undefined", "null"
+*Remember null is considered as a 'null'
+
+REPL : Read, Execute, Print, Loop; Used by interpretor to print answer line by line;
+
+Max and min Integer in JS;
+Number.MAX_SAFE_INTEGER and NUMBER.MIN_SAFE_INTEGER ; remains same in every JS environment;
+Number.MAX_VALUE depends upon system/32-bit/64-bit.
+
+Max String length depends upon the max integer value;
+How? 
+Because if we check the return type of "any string".length or [1,2,3].length is always an integer,
+Thus, lets say, a single char takes space of 2 bytes, thus, it is true that =>
+N*2 < maxsize of int, where 'N' is the length of string;
+Or, N*2 < X, where 'N' is the length of string and 'X' maximum memory allocated to JS program;
+
+Objects in JS :
+let obj = {
+    it_is_called_property : "this_is_value_of_property",
+    i_can_have_any_value : 12,
+    i_can_have_any_value2 : "I am string"
+}
+
+let obj2 = {
+    it_is_called_property : "this_is_value_of_property",
+    i_can_have_any_value : 12,
+    i_can_have_any_value2 : "I am string",
+    nested_obj : {
+        i_am_object_inside_object : "Another string"
+    }
+}
+
+Adding properties in JS => Just add a new property with;
+obj.new_property = "I am a value of new_property"
