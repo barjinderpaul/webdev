@@ -1,9 +1,5 @@
-Higher Order Functions :
-A function is a higher order function if a function can take a function as an
-argument or when a function can return a function, it is called higher order function.
 
-Example of function as an argument- 
-/*
+// Higher Order function - taking function as an argument
 function getFirstName(fullName) {
     return fullName.split(" ")[0];
 }
@@ -14,14 +10,14 @@ function greet (findName, fullName) {
 }
 
 greet(getFirstName,"ABC World");
-*/
 
-Example of function returning a function - 
-/*
+
+// Higher order function - return function
+
 function createGreetings(name) {
-    let firsName = name.split(" ")[0];
+    let firstName = name.split(" ")[0];
     function greet(){
-        console.log(`Hello ${firsName}`);
+        console.log(`Hello ${firstName}`);
     }
     return greet;
 }
@@ -31,4 +27,3 @@ let XYZgreeter = createGreetings("XYZ World")
 
 ABCgreeter()
 XYZgreeter()
-*/
