@@ -25,6 +25,7 @@ In JS, data has types -> we can check type of any data with typeof operator;
 
 data types are returned as strings => "number", "string", "boolean", "object", "undefined", "null"
 *Remember null is considered as a 'null'
+Higher priority is given to "string", so 1 + "1" becomes "11"; "number" is automatically converted to "string";
 
 REPL : Read, Execute, Print, Loop; Used by interpretor to print answer line by line;
 
@@ -39,7 +40,7 @@ Thus, lets say, a single char takes space of 2 bytes, thus, it is true that =>
 N*2 < maxsize of int, where 'N' is the length of string;
 Or, N*2 < X, where 'N' is the length of string and 'X' maximum memory allocated to JS program;
 
-Objects in JS :
+OBJECTS in JS :
 let obj = {
     it_is_called_property : "this_is_value_of_property",
     i_can_have_any_value : 12,
@@ -55,5 +56,80 @@ let obj2 = {
     }
 }
 
-Adding properties in JS => Just add a new property with;
+Adding properties in JS object => Just add a new property with;
 obj.new_property = "I am a value of new_property"
+
+Deleting properties in JS object => with keyword 'delete'
+delete obj.new_property;
+If we access any property which is not present in the object, it returns undefined;
+
+BASIC FUNCTIONS in JS;
+
+function increment(x){
+    return x+1;
+}
+increment(10); //will return 11;
+
+Difference between equality operators;
+
+1 == "1" returns true because == operator is called non-script equality operator;
+        "number" is automatically typecasted to "string" and "1" is equal to "1";
+        thus returns true;
+
+1 === "1" return false because === operator is called script equality operator;
+        "number" is not automatically typecasted to "string";
+        === is also called strict equality operator;
+
+
+// Checking equality
+console.log(1 == "1");
+console.log(1 === "1");
+console.log(1 + "1" == 1); //false
+console.log(1 + "1" == 11); //true, because 11 is automatically typecasted to "11"
+console.log(1 + "1" == "11"); //true
+console.log("11" - 1 == 1); //false, because "11"-1 returns 10;
+console.log([] == ""); //true
+console.log([] == 0); //true  [] can be typecasted to "" and vice versa;
+console.log("" == 0); //true
+
+
+Braces in JS;
+When Braces {} comes in LHS, it is treated as block (loops);
+When Braces {} comes in RHS, it is treated as objects;
+
+console.log({} + []); //Try in REPL; will return 0
+Because -> [] is treated as "" which is again treated as 0, Thus, [] = 0,
+            and {} on LHS is consided as block. Thus, {} = 0 (empty block);
+            Thus 0 + 0 = 0
+
+console.log([] + {}); //Try in REPL; will return '[object Object]'
+Because -> {} is on RHS and is treated as an object. Converting object to string results in '[object, Object];
+            [] = ""
+            thus, both are converted to strings;
+            thus, "" + "[object, Object] = "[object, Object];
+
+
+//+ operator; typecasts the argument on the right side of +
+console.log("1");   //String
+console.log(+"1");  //Number
+console.log(+[]);  //Number = 0
+console.log(+{});   //NaN
+
+For equality in details => Read mdn equality;
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+
+Strings in JS;
+Strings are immutable in JS;
+All string functions create new strings, apply operation and then return new string;
+
+Functions in string :
+1. pattern.indexOf( test,startingPoint[optional] );
+2. string.substr(startingPoint, numberOfPositionsFromStartingPoint[optional]);
+3. string.substring(startingPoint, endingPoint[optional]); //does not work with negative indices
+4. string.slice(starting,endingPoint[optional]); //works with negative indices;
+5. string.split('a'); wherever there will be a, it will be splitted and returns an array;
+    example :
+    let url = "https://www.youtube.com/watch?v=asdad21124"
+    url.split("?") // [ https://www.youtube.com/watch, v=asdad21124 ]
+    url.split("=") // [ https://www.youtube.com/watch?v , asdad21124 ]
