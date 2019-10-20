@@ -32,3 +32,15 @@ let XYZgreeter = createGreetings("XYZ World")
 ABCgreeter()
 XYZgreeter()
 */
+
+
+
+
+CLOSURES;
+Scope of outer function is preserved inside inner function. This scope is called the closure scope.
+
+function a() {
+    function b(){
+        //variables of function 'a' are still accessable to function 'b' due to closure scope;
+    }
+}
