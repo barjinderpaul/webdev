@@ -1,3 +1,20 @@
 
 Asynchronous functions : 
- We can let a function continue in the background while running some new task in the foreground.
+We can let a function continue in the background while running some new task in the foreground.
+ 
+setTimeout function() :
+setTimeout(function,time in milliseconds)
+setTimeout(done,1000);
+setTimeout calls the done function after the delay of 1s;
+setTimeout is an example of async function;
+
+
+Basic example :
+function task( done ){
+   console.log(`Doing task`)
+   setTimeout(done,1000)
+}
+task(function(){
+    console.log(`Task done`)
+})
+console.log(`we did a task`)
