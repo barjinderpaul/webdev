@@ -144,5 +144,3 @@ console.log(q.a)
 console.log(p.a)
 
 
-
-Asynchronous functions : 

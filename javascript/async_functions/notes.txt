@@ -1,0 +1,3 @@
+
+Asynchronous functions : 
+ We can let a function continue in the background while running some new task in the foreground.
