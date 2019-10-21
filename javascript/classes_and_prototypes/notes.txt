@@ -1,0 +1,87 @@
+OBJECTS in JS;
+
+Object Structure :
+let objectt = {
+    property : value
+}
+
+Basic Example : 
+let x = {
+    a:10,
+    b:"ad",
+    c:false,
+    d:[1,2,3],
+    e: {
+        p:"add",
+        q:true
+    }
+}
+
+x.new_property = "new value"
+
+console.log(x);
+
+
+Objects having functions :
+let obj = {
+    anNumber : 123,
+    aString : "abc",
+    aFunction : function(){
+        return (this.anNumber + this.aString);
+    }
+}
+
+console.log(obj.aFunction())
+
+Note -: this. is used to refer things inside the same object
+
+
+NEW keyword;
+
+function fruit (color,taste){
+    this.color = color;
+    this.taste = taste;
+}
+
+let orange = new fruit("orange","sour");
+let apple  = new fruit("red","sweet");
+
+let mango = {
+    color:"yellow",
+    taste:"sweet"
+}
+
+console.log(orange)
+console.log(apple)
+
+// orange, apple and mango are all objects but orange and mango behave has objects of fruit class
+
+
+
+*Autoboxing : 
+
+functione fun() {
+    //Stuff her
+}
+
+fun()     //here this refers to global
+new fun() // here JS creates an empty object and runs function inside that object/box, therefore, 'this' refers to that new box which is created;
+
+function foo2() {
+    this.p = "something"
+    return 10;
+} 
+
+let o1 = foo2();
+let o2 = new foo2();
+console.log(o1)
+console.log(o2) // return statement has no value when called with 'new' keyword, the box/object is returned when a function is called with 'new'
+console.log(o1.p)
+console.log(o2.p) 
+
+
+
+//All global items/functions are present in global object;
+//Only works in nodejs and not in browser;
+//In browser, everything is present inside 'window';
+
