@@ -108,3 +108,28 @@ let sum = arr.reduce( (accum,item) => {
 })
 
 console.log(sum)
+
+
+
+IIFE in JS;
+// IIFE : Immediately Invoked Function Expression
+
+//Invokes immediately when it is created;
+(function(sayHello){
+    console.log(`Hello`)
+})();
+
+Benefits : can help us to create local scope without disrupting global scope;
+
+(function() {
+    let a = 10
+    let b = a/5
+    console.log(a+b)
+})();
+
+console.log(a) //In global scope a does not exist;
+
+Benefits continued : can help in minification, even used by sites such as ugligy.js
+(function(l){
+    l("hello worl")
+})(console.log)
