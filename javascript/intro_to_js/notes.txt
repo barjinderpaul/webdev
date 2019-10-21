@@ -183,3 +183,35 @@ function foo3(){
 }
 foo3();
 console.log("line 158 " + z);
+
+
+We can make objects with const;
+const obj = {
+    k1 : 'ad',
+    k2 : 10, 
+    k3 : false
+};
+
+obj = {a:10} //invalid
+obj.k4 = 123 //valid //can add properties but cannot modify the whole object
+delete obj.k4 //works
+
+
+We can also make arrays with const because arrays are essentially objects;
+const arr = [1,2,3]
+arr.push(4) //works
+arr.pop() //works
+arr = [12,32] //invalid
+
+So basically const does is that, it does not let us assign a new value directly to our variable which is const.
+
+
+*Pass by Value and Pass by reference in JS;
+According to JS docs, everything in JS is passed by value.
+
+If we try to pass arrays in function, it may seem it is passed by reference but
+actually what happens in case of non-primitve data such as arrays/objects, 
+array/objects are referring to a reference called 'id' and that 'id' references to our data;
+So, when we pass the array into any function, what we actually pass is that id, we pass id as a value, but
+as id acts as a reference to our array/object data, it actually changes it. However, main concepts stays that 
+everything in javascript is passed as a value and not by reference.

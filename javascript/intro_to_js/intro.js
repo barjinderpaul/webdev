@@ -177,3 +177,49 @@ function foo4(){
 
 foo4();
 console.log(`Line 177 ${m}`);
+
+
+const objConst = {
+    k1 : 'ad',
+    k2 : 10,
+    k3 : false
+};
+
+objConst.k4 = 'k4' //works
+delete objConst.k4 //works
+// obj = {a:10} //invalid
+
+const array = [1,2,3]
+array.push(4)   //valid
+array.pop() //valid
+// array = [323,23] //invalid
+
+
+// Pass by value and pass by reference
+
+let winner = "this is winner"
+
+function changeWinnder(winner) {
+    winner = "This is a new winner"
+}
+
+// To verify value is passed by value
+console.log(`Previous winner = ${winner}`)
+changeWinnder(winner)
+console.log(`New winner ${winner}`)
+
+
+let winnersArray = [
+    'first','second','third'
+]
+
+//winnersArray is not passed by reference, check content from line 209 in notes.txt
+function changeWinners(winnersArray) {
+    winnersArray[0] = 'xyz'
+    winnersArray[1] = 'pqr'
+    winnersArray[2] = 'jkl'
+}
+
+console.log(`Before change ${winnersArray}`)
+changeWinners(winnersArray)
+console.log(`After changing ${winnersArray}`)
