@@ -133,3 +133,9 @@ Benefits continued : can help in minification, even used by sites such as ugligy
 (function(l){
     l("hello worl")
 })(console.log)
+
+
+*Understanding javascript callstack;
+The stack gets filled upwards as the functions are called and then they are popped out from the stack;
+The call stack can be seen via creating a custom error with throw new Error('Any error here);
+Generated error will show the whole callstack.
