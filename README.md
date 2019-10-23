@@ -18,14 +18,14 @@ Always displays websited as scaled according to the device's width and
 only scaled to 1, such that there are no horizontal scroll bars.
 
 
-#### Typing Symbols
+### Typing Symbols
 >`4&gt;3  3&lt;4 &quot;hey, you seeing it&quot; 
 &amp; all of it is under &copy; &copysr;`
 
 4&gt;3  3&lt;4 &quot;hey, you seeing it&quot; 
 &amp; all of it is under &copy; &copysr;
 
-#### `<input>` tag
+### `<input>` tag
 
 >`<input>`
 
@@ -34,9 +34,6 @@ Types in input element.
 ##### by defaul type = "text"
     
 >`<input type="text" placeholder="Enter your name"> `
-<br/>
-
-<input type="text" placeholder="Enter your name">
 
 >`<input type="password" placeholder="Enter your password">`
 
@@ -48,38 +45,40 @@ Types in input element.
 
 >`<input type="color">`
 
+#### Radio buttons
+**If we dont give the same 'name' attribute to all the radio buttons, 
+they will not be in the same group.**
 
-    <!--Radio buttons
-        If we dont give the same 'name' attribute to all the radio buttons, 
-        they will not be in the same group.
-    -->
-    <input type="radio" name="sample">Radio Button1
-    <br>
-    <input type="radio" name="sample"> Radio button2
-    <br>
-    <input type="radio" name="sample"> Radio button 3
+>`<input type="radio" name="sample">`
 
-    <br><br>
-    <!--Checkboxes-->
-    <input type="checkbox"> CB1
-    <br>
-    <input type="checkbox"> CB2
-    <br><br>
-    <!--Multiselect and select-->
-    <select name="" id="">
-        <option value="">One</option>
-        <option value="">Two</option>
-        <option value="">Three</option>
-    </select>
+>`<input type="radio" name="sample"> `
 
-    <br><br>
+>`<input type="radio" name="sample"> `
+
+
+#### Checkboxes
+>`<input type="checkbox">`
+
+>`<input type="checkbox">`
+
+
+#### Multiselect and select
+
+
+<select name="" id="">
+    <option value="">One</option>
+    <option value="">Two</option>
+    <option value="">Three</option>
+</select>
+
+  
     <select name="" id="" multiple>
         <option value="">One</option>
         <option value="">Two</option>
         <option value="">Select all</option>
     </select>
-    <!--selected by default-->
-    <br><br>
+
+
     <select name="" id="">
         <option value=""">One</option>
         <option value="" selected>Two</option>
