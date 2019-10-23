@@ -101,6 +101,56 @@ let person1 = new Person("John Doe",21);
 //This will create an object with :
 Person {firstName:"John",lastName:"Doe",age:21,isAdult :[Function]}
 
+*ES6 classes
+// ES6 Classes;
+// Works same as basic prototypes and object but there is a new syntax to write these.
+
+class Person2 {
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+}
+
+let per1 = new Person2('John Sample',21)
+let per2 = new Person2()
+
+
+console.log(per1)
+//false
+console.log(Person2.isPrototypeOf(per1))
+//true
+console.log(Person2.prototype.isPrototypeOf(per1))
+
+
+console.log(per2)
+
+// Comparing class way with prototype way
+console.log(typeof Person + ' ' + typeof Person2)
+// Both result in output = function; which simply means the internal working is same but only the way of writing is different.
+
+// Inheritance;
+
+// Super must be used before using this or returning anything.  
+class Student extends Person2 {
+    constructor(name,age,school) {
+        super(  name,age)
+        this.school = school
+    }
+}
+
+let s = new Student('Sample John',32)
+let s2 = new Student('John2 sample',21,'SAmple School')
+
+console.log(s)
+console.log(s2)
+
+console.log(s.__proto__)
+console.log(s.__proto__.__proto__)
+
+console.log(Person2.prototype.isPrototypeOf(s)) //True because Student's object 's' has inherited properties of Person2
+console.log(Student.prototype.isPrototypeOf(s)) //True because 's' is the Object of Student class.
+
 
 Prototypes in JS;
 With prototypes, we can emulate inheritance in JS;
@@ -144,3 +194,106 @@ console.log(q.a)
 console.log(p.a)
 
 
+*Notes on object inheritence
+// Changing values of inherited properties does not affect the original values. However, there is a way to change the original values also; 
+// What it does instead is creates a new property of the object; because the inherited properties are read only;
+/* if the new property does not exist in the current object, it will look through the whole proto chain and if it finds the value there, it will read it.
+    It is useful when we are writing a property with the inherited property in mind. 
+    For example: If we want to create a value and it should be increment by 5 from the inherited value; JS will look through
+                proto chain and if it finds it inherited it will take that value and apply the specific operation of incrementing by 5.
+                Then, it will create a new property in the current object.
+*/
+
+// We can change the value of the proto itself but not the original place where it came from;
+console.log('Original a')
+console.log(a)
+console.log('b proto')
+console.log(b.__proto__)
+b.__proto__.name = 'new name'
+console.log('Original a after updating proto')
+console.log(a)
+console.log('b proto after updating b.__proto')
+console.log(b.__proto__)
+
+
+// Proto chain;
+console.log(`Learning about proto chain`)
+let obj1 = {
+    name:'ABC Doet',
+    age:20
+}
+
+let obj2 = Object.create(obj1) 
+let obj3 = Object.create(obj2)
+
+//directly inherited from obj1
+console.log(obj2.__proto__)
+
+// empty because obj2 is empty
+console.log(obj3.__proto__)
+
+// inherited from a
+console.log(obj3.__proto__.__proto__)
+
+
+// Checking if one object is prototype of another object;
+//It checks whether obj2.__proto__ contains anything from obj1
+console.log(obj1.isPrototypeOf(obj2))
+
+console.log(obj1.isPrototypeOf(obj3))
+
+
+
+//  Every primitive datatype has a __proto__ property from its parent Class;
+// Such as any string will inherit __proto__ from String class;
+let x = "randomstring"
+console.log(x.__proto__)
+console.log(x.__proto__ == String.prototype)
+
+
+// Everything is inherited from Object.prototype except undefined;
+console.log(Object.prototype.isPrototypeOf(String.prototype))
+
+
+// Every default function in JS is inherited from Class_name.prototype.function_name;
+console.log(Array.prototype.sort)
+console.log(String.prototype.substr)
+
+
+
+/* 
+Our both objects h1 and h2 have isAdult function.
+Every object that we will create will have this isAdult function. Each function will have it's memory allocated;
+As the function's code is same for all the users, why do we have to include in every object?
+Here .prototype comes into play : 
+We can do like : 
+Human.prototype.isAdult = (age) => age>=18
+Now, what will happen is that, no object will have isAdult function but our Human will have a isAdult function and 
+any object created with Human will automatically have isAdult function;
+Writing the example with Human2 :
+ */
+
+function Human2(name, age) {
+    this.name = name
+    this.age = age
+}
+//works
+Human2.prototype.isAdult = function(){return  (this.age) >=18; }
+
+// does not seem to work
+// Human2.prototype.isAdult = () => {return (this.age)>=18};
+
+let h21 = new Human2("John sample",21)
+let h22 = new Human2("Sample Joe",23)
+
+console.log(h21)
+console.log(h22)
+
+//false
+console.log(Human2.isPrototypeOf(h21))
+// true
+console.log(Human2.prototype.isPrototypeOf(h21))
+
+console.log(h21.__proto__)
+console.log(h22.__proto__)
+console.log(h21.isAdult())
