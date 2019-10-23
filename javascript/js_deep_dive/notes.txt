@@ -139,3 +139,17 @@ Benefits continued : can help in minification, even used by sites such as ugligy
 The stack gets filled upwards as the functions are called and then they are popped out from the stack;
 The call stack can be seen via creating a custom error with throw new Error('Any error here);
 Generated error will show the whole callstack.
+
+*setTimeout and setInterval in JS;
+
+setTimeout(function_here,time_delay,argument[optional]) : 
+setTimeout halts the execution of a program for a certain time period which is time_delay; and is called when call stack is ready to execute it;
+Instance where setTimout will never run;
+when an infinite while loop is running, even if we have set up a setTimeout, the program control will never come out of from while loop and setTimeout will never be executed.
+
+setInterval(function_here,time_delay) :
+setInterval makes the function run after every specific time which is equal to time_delay;
+The program will keep on running until the execution is halted manually or by clearInterval;
+setInterval returns us an id, which helps us in clearing a specific interval;
+clearInterval(interval_id_returned_via_setInterval) : this clears the interval and program continues with the next instruction.
+
