@@ -65,11 +65,11 @@ they will not be in the same group.**
 #### Multiselect and select
 
 
-<select name="" id="">
-    <option value="">One</option>
-    <option value="">Two</option>
-    <option value="">Three</option>
-</select>
+    <select name="" id="">
+        <option value="">One</option>
+        <option value="">Two</option>
+        <option value="">Three</option>
+    </select>
 
   
     <select name="" id="" multiple>
