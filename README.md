@@ -1,7 +1,8 @@
 # Web Development
 This repository contains the code done during learning web development. <br />
 The README.md contains brief notes about the topics which I learned.
-
+<details>
+<summary> HTML </summary>
 # HTML
 
 #### `<meta>` tag
@@ -257,3 +258,5 @@ Notes -
 
         </table>
 ```
+
+</details>
