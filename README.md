@@ -65,13 +65,13 @@ they will not be in the same group.**
 #### Multiselect and select
 
 
-        <select name="" id="">
-            <option value="">One</option>
-            <option value="">Two</option>
-            <option value="">Three</option>
-        </select>
+    <select name="" id="">
+        <option value="">One</option>
+        <option value="">Two</option>
+        <option value="">Three</option>
+    </select>
 
-  
+
     <select name="" id="" multiple>
         <option value="">One</option>
         <option value="">Two</option>
@@ -141,3 +141,26 @@ Type can be anything from - `["a","A","I","i",...]`
     <li>Third</li>
 </ol>
 ```
+#### Links
+
+>`  <a href="https://www.google.com" target="_blank">Go to google</a>`
+1. target="_blank" makes the webpage open inside in a new blank window. 
+2. target="_self" is the default one.
+
+It will open your default mailbox with 'to' as the specified mail.
+>`<a href="mailto:abc@gmail.com">Mail me!</a>`
+
+It will open your dialpad with specified number.
+>`<a href="tel:+123456789">Call me</a>`
+
+in-page anchors : <br>
+This will focus on the tag having id ="samplePara" `<p id="samplePara">`
+>`<a href="#samplePara">Go to sample para</a>`
+ 
+Relative links <br>
+Same directory, another file.
+>`<a href="about.html">Open about</a>`
+
+Relative links + in-page anchors 
+
+>`<a href="about.html#sectionName">About's page sectionName</a>`
