@@ -65,11 +65,11 @@ they will not be in the same group.**
 #### Multiselect and select
 
 
-    <select name="" id="">
-        <option value="">One</option>
-        <option value="">Two</option>
-        <option value="">Three</option>
-    </select>
+        <select name="" id="">
+            <option value="">One</option>
+            <option value="">Two</option>
+            <option value="">Three</option>
+        </select>
 
   
     <select name="" id="" multiple>
@@ -85,3 +85,59 @@ they will not be in the same group.**
     </select>
 
 
+#### Lists
+
+Lists can be ordered as well as undordered.
+
+Two types of attributes : 
+1. type="" which gives the type of list.
+2. start="" which sets the start number of the list to the specified element
+many other attributes are available and can be found on MDN such as content
+to be displayed on print or laptops etc.
+
+Unordered Lists :
+```
+<ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ul>
+```
+Unordered lists with type property :
+```
+<ul type="circle">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+</ul>
+<ul type="square">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+</ul>   
+```
+
+Ordered lists :
+```
+<ol>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ol>
+```
+Ordered lists with type and start : <br>
+Type can be anything from - `["a","A","I","i",...]`
+```
+<ol type="A">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+</ol>
+```
+```
+<ol start="200">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ol>
+```
