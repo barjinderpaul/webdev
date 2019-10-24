@@ -143,9 +143,10 @@ Type can be anything from - `["a","A","I","i",...]`
 ```
 #### Links
 
->`  <a href="https://www.google.com" target="_blank">Go to google</a>`
 1. target="_blank" makes the webpage open inside in a new blank window. 
 2. target="_self" is the default one.
+
+>`  <a href="https://www.google.com" target="_blank">Go to google</a>`
 
 It will open your default mailbox with 'to' as the specified mail.
 >`<a href="mailto:abc@gmail.com">Mail me!</a>`
@@ -153,14 +154,106 @@ It will open your default mailbox with 'to' as the specified mail.
 It will open your dialpad with specified number.
 >`<a href="tel:+123456789">Call me</a>`
 
-in-page anchors : <br>
+In-page anchors : <br>
 This will focus on the tag having id ="samplePara" `<p id="samplePara">`
 >`<a href="#samplePara">Go to sample para</a>`
  
-Relative links <br>
+Relative links :<br>
 Same directory, another file.
 >`<a href="about.html">Open about</a>`
 
-Relative links + in-page anchors 
+Relative links + in-page anchors :
 
 >`<a href="about.html#sectionName">About's page sectionName</a>`
+
+
+#### Multimedia
+
+Image tag :
+>`<img src="fullNameOfTheFile.extensionofThefile" alt="if image is not displayed, this text will be displayed">`
+
+Note - Set only either of width or height, else image might get distorted 
+>`<img src="sameHere.jpg" alt="sameHere" width="200" height="50">`
+ 
+Video tag :
+>`<video src="fullName.extension" controls></video>`
+
+Autoplay options loads and plays the video automatically when the page is opened.
+>`<video src="fullName.extension" controls autoplay></video>`
+
+Loop lets the video play back to back.
+>`<video src="fullName.extension" controls autoplay loop></video>`
+    
+With preload="auto", automatic buffering of video starts.
+>`<video src="fullName.extension" preload="auto"></video>`
+
+With preload="meta", only thumbnail and video length is displayed
+>`<video src="fullName.extension" preload="meta"></video>`
+
+When 'none' is selected, nothing is applied on webpage not even thumbnail
+>`    <video src="fullName.extension" preload="none"></video>`
+
+Video with subtitles
+```
+<video src="fileName.extension">
+    <track kind="subtitles" src="subtitlefile.extension" srclang="en" label="English">S
+</video>
+```
+Audio tag :
+>`<audio controls src="fullname.extension" ></audio>`
+
+Note - if we want background audio even if user does not does anything -->
+
+>`    <audio src="fileName.extension" autoplay loop></audio>`
+
+
+#### Tables
+
+     <table border="5" cellspacing=10 cellpadding=20>
+        <tr >
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+        <tr>
+            <td>Five</td>
+            <td>Six</td>
+            <td>Seven</td>
+        </tr>
+    </table>
+
+Notes -
+1. border by default has emboss effect
+2. cellspacing=10 ; spaces inbetween cell borders gets increases
+3. cellpadding=10 ; spaces increases within the body area of the cells
+
+`<thead>` for enabling Headings
+```
+        <table border="5px solid black" cellspacing="2px">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Col 3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Ram</td>
+                <td>Kumar</td>
+
+            </tr>
+            <tr>
+                <td>Sham</td>
+                <td colspan="2" align="center">Kumar</td>
+            </tr>
+            <tr>
+                <td>Ram</td>
+                <td>Sham</td>
+                <td>Gyan</td>
+            </tr>
+
+        </table>
+```
