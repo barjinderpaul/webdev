@@ -291,7 +291,7 @@ Applying CSS :
         div { 
             background-color:"black"
         }
-        ```
+    ```        
 3. id selector - Applies CSS on element which has specific id. Ids are unique to every element.
     ``` 
     #Ids_are_referenced_by_this {
@@ -395,3 +395,127 @@ The relationship can be based on whether an element is direct child of another e
     }
     /*All unordered-lists that come under ordered-lists (may not be directly) of the same parent will be colored grey in background.*/
     ```
+---
+
+Transforms and Translations :
+
+Transform notes - <br>
+1. translate(x,y) from left and from above; can also be negative;
+    >`     transform : translate(30px,30px); `
+
+2. Scales from center.
+    >`transform : scale(1.2);`
+
+3. Skewing is changing angle w.r.t. xdeg or ydeg.
+    >`transform : skew(30deg,0); skew(xdeg,y) || skey(x,ydeg); `
+
+4. By default it is rotateZ() .<br>rotateX and scaleY do the same thing.
+    >`transform: rotate(45deg);` 
+
+<br>
+Transition notes - <br>
+Transition allows us to change property values of an element smoothly, over a given duration of time.
+    
+Example 1 :
+```
+#div1:hover {
+    background-color: blue;
+    height : 40px;
+    width: 120px;
+    transition: height 1s, background 4s, width 1s;
+}
+```
+Example 2 :
+```
+    div:hover + div {
+    margin-left : 100px;
+    margin-top : 150px;
+    transition: margin 3s;
+    }
+```
+
+<br>
+Positioning notes - <br>
+With the help of position, we can adjust/fix/automate the position of elements.
+
+1. position:static; <br> position:static is the default. <br> Element will stick to the normal page flow. 
+
+2. position: relative;<br> With relative positioning, we can adjust the position of the element we want with respect to other element as well.
+
+3. position:fixed; <br>
+If position:fixed, then the element on which it is applied remains on the same position even if we scroll the web page.
+
+3. position: absolute; <br>
+    Position:absolute works with the nearest ancestor that had the property =  position :(fixed || or anything ).  <br>
+    If no element had a property = position : fixed, then we have the "Window" which has the property = position:fixed.
+ 
+4. position : sticky; <br>
+    The element on which it is used sticks to it's position even if the page is scrolled;
+
+<br>
+Animation notes - <br>
+Animations help elements gradually change one style to other. <br>
+Keyframes are required for the use of animations. <br>
+Keyframes - This is an animation rule on basis of which style changes gradually. <br>
+
+Examples include two ways of writing keyframes. <br>
+Example 1 :
+
+```
+#div1:hover{
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: 30;
+}
+
+@keyframes slide {
+    from {
+        margin-left : 40px;
+    }
+    to {
+        margin-left : 300px;
+    }
+
+}
+```
+Example 2 :
+```
+#div3:hover + div {
+    animation-name : crazyslide;
+    animation-duration: 2s;
+    animation-iteration-count: 30;
+}
+
+keyframes crazyslide {
+    0% {
+        margin-left : 40px;
+        height:80px;
+    }
+    25% {
+        height : 40px;
+        margin-left : 100px;
+    }
+    50% {
+        margin-left:150px;
+        background-color: red;
+        height:0px;
+    }
+    75% {
+        height: 40px;
+        margin-left:200px;
+    }
+    100%{
+        height:80px;
+        margin-left : 250px;
+        background-color: blue;
+    }
+}
+
+```
+
+---
+
+Flexbox - <br>
+1. Flexboxes help makes website responsive to different screens and sizes. <br>
+2. The elements auto position themselves according to different screens and sizes. <br>
+3. Flexboxes work with block elements.
