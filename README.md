@@ -261,12 +261,137 @@ Notes -
 
 </details>
 
+Three types of using CSS :
+1. Inline CSS -  CSS written while writing the tag.
+    >`<p style="color:red;">This is a paragraph.</p>    `
+2. Internal CSS - CSS written in the `<head>` tag.
+    ```
+        <head>
+            <style>
+            body {
+            background-color: linen;
+            }
 
-<details>
-<summary>CSS</summary>
+            h1 {
+            color: maroon;
+            margin-left: 40px;
+            }
+            </style>
+        </head>
+    ```
+3. External CSS - CSS written in external file and imported in HTML file.
+    >`<link rel="stylesheet" href="style.css">`
 
-</details>
+---
 
-<details>
-<summary>Javascript</summary>
-</details>
+Applying CSS :
+1. `*` selector applies CSS on every element.
+2. tag selector - Applies CSS on every element of the tag
+    ```
+        div { 
+            background-color:"black"
+        }
+        ```
+3. id selector - Applies CSS on element which has specific id. Ids are unique to every element.
+    ``` 
+    #Ids_are_referenced_by_this {
+
+    }
+    ```    
+4. class selector - Applied CSS on element which has a class associated with it. Many tags in html can have one class.
+
+    ```
+        .classes_are_referenced_by_this {
+            
+        }
+    ```
+    Notes - 
+    1. Precedence of #id > precedence of .class > precedence of element >  precedence of *. It can be verified from Developer tools in the elements -> style window.
+    3. In case of duplicate properties for the same element, top down approach is followed.
+    4. Relative path css vs css in head tag depends on the order they're written. Follows top down approach.
+    5. Inline style css overrides every other css.
+
+---
+
+Block and inline elements : <br>
+
+
+1. Block element = p,h,div,etc.. takes a while width of the page-->
+    >`<p>Para1</p> some more text`
+    
+2. Inline element = `<b>`,`<i>`,`<span>`,etc.. takes only that much space which is required.  
+    >`    <b>Bold text</b>`
+
+3. Bare text is also inline; Bare text means the text without any tag enclosing it <br>
+    `This is bare text`
+
+
+4. We can make a block element inline and vice versa.
+    ```
+    <p style="display: inline">Para 2 inline</p>
+    <b style="display: block">B tag is now block element</b>
+    ```
+5. Block elements can give padding, margin and border to itself.
+
+---
+
+Margin, padding and border :
+
+1. margin-area gets the color from parent element,
+2. margin is outside the element.
+3. padding is inside the element and takes the color from the element itself.
+4. border makes his own space inside margin but outside.
+5. Border takes up space from the element space itself.
+6. If element space is 20px and border takes 1px, then the element will remain only with 19px space;
+
+---
+
+Fonts :
+
+---Font-Types
+
+1. pt mainly for type writers;
+2. em is width of the character 'm' in default font size. 'm' is choosen because it is the widest english character.
+3. vh is the height of the window as well. 1vh is 1/100 of window height. It changes according to the window size.
+4. vw is the width of the window as well.
+
+--- Fonts
+
+1. monospace font means all character will takes same width
+2. sans-serif font ; sans mean without and serif means tips outside of eachcharacter
+3. multiple fonts means it will apply first, if first available then secondone and it continues;
+
+---
+
+Combining Selectors : <br>Used to apply CSS at once to different elements.<br>It is also used to apply CSS on elements/tags based on a relationship.<br> 
+The relationship can be based on whether an element is direct child of another element, whether an element comes directly under another element and various other relationships.
+
+--- Different relationships - <br>
+1. A>B ; B is directly inside A i.e., direct child.
+    ```
+    ul > li {
+        color:blue;
+    }
+    /*All direct li inside ul will be colored blue*/
+    ```
+2. A B ; B is a descendant of A. i.e., not a direct child.
+    ```
+    ul ul {
+        font-style: italic
+    }
+    /*All unordered list inside unordered list will styled italic.*/
+    ```
+3.  A + B ; A and B needs to be direct sibling; i.e., B should come just after A under the same parent in HTML.
+    ```
+    ol + ul {
+        background-color:green;
+    }
+    /*All unordered-lists that come directly under ordered-lists of the same parent will be colored green in background*/
+    ```
+4. A~B ; A and B need to be siblings i.e., B should come after A not just after under the same parent in HTML.
+    ```
+    ol ~ ul {
+        background-color: grey;
+    }
+    /*All unordered-lists that come under ordered-lists (may not be directly) of the same parent will be colored grey in background.*/
+    ```
