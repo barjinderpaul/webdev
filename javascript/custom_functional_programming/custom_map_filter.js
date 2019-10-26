@@ -36,3 +36,9 @@ let filteredNums = nums.myFilter( num => !(num&1) )
 console.log(nums)
 
 console.log(filteredNums)
+
+
+// Converting post titles to url-slugs
+let title = 'Winter is coming'
+let urlSlug = title.split(' ').map(word => word.toLowerCase()).join('-')
+console.log(urlSlug)
