@@ -42,3 +42,16 @@ console.log(filteredNums)
 let title = 'Winter is coming'
 let urlSlug = title.split(' ').map(word => word.toLowerCase()).join('-')
 console.log(urlSlug)
+
+// currying of functions
+// what it does is that it converts n-arity argument functions to 
+// N-functions of 1 arity. where arity is the number of arguments a function takes.
+function add(x){
+    return function(y) {
+        return function(z) {
+            return x+y+z
+        }
+    }
+}
+
+console.log(add(1)(2)(3))
