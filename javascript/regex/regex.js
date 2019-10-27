@@ -140,3 +140,62 @@ string2 = 'this is the beginning.'
 console.log(regexTest.test(string))
 console.log(regexTest.test(string2)) //false
 
+// Shorthand character classes - These are some predefined shortcuts made for some regular expressions which are very common.
+// example = \w(small w) which is shorthand for [A-Za-z0-9_], basically it will match all alphanumeric strings as well as an '_'
+// Another shorthand is = \W (capital W), shorthand for [^A-Za-z0-9_], i.e., anything but numbers and letters;
+// Another shorthand for counting only digits is = \d, which is shorthand for [0-9] and it inverse \D, will match all non-numbers
+// Another shorthand for counting only whitespaces/return/tabs/form-feed/new-line-characters = \s, shorthand for [\r\t\f\n\v] , inverse for it is \S, which matches all non-whitespace chars.
+regexTest = /\w/g
+string = 'matchingLengthIsEqualOrNot12323123'
+resultMatched = string.match(regexTest)
+console.log(`${string.length === resultMatched.length}`)
+
+regexTest = /\W/g
+string = 'counting non-alphanumeric characters. Here exits, -., It counts spaces as well.'
+resultMatched = string.match(regexTest)
+console.log(`${resultMatched.length}`)
+
+
+// Quantity specifiers ;
+// Where '+' gives us the flexibility of one or more match and '*' gives us the flexibility of zero or more matches, what if we want a specif lower and upper bound for
+// number of matches, this is where quantity specifiers come into place, denoted by curly brackets {lowerBound,UpperBound[optional] }
+// to specify exact number of matches, only have one number in {}, example, matching required 3 = {3}
+// to specift atleast some amount of matches, only have one number and a ',' with it., example = matching atleast 3 = {3,}
+regexTest = /\d{2,5}/
+string = 'notMatched1, matched123 , notmatched123456'
+resultMatched = string.match(regexTest)
+console.log(`matched are = ${resultMatched}`)
+
+
+// '?' of lazy matching can also be used to ignore any character;
+regexTest = /colou?r/
+string = 'english color'
+string2 = 'british colour'
+
+resultMatched = string.match(regexTest)
+console.log(`${resultMatched}, ${regexTest.test(string)}`)
+
+resultMatched2 = string2.match(regexTest)
+console.log(`${resultMatched2} , ${regexTest.test(string2)}`)
+
+
+// Grouping of characters;
+// Grouping of characters can be done with the use of parenthesis (), grouping helps to group | statements within regex;
+regexTest = /n(igh|o)t/ //this will search for night as well as not
+string = 'this is night'
+string2 = 'this is not day'
+console.log(`${regexTest.test(string)}, ${regexTest.test(string2)}`)
+
+
+
+// Making a regex for username;
+/*
+conditions - 
+1) Usernames can only use alpha-numeric characters.
+2) The only numbers in the username have to be at the end. There can be zero or more of them at the end.
+3) Username letters can be lowercase and uppercase.
+4) Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+ */
+
+regexTest = /^[a-zA-z]([a-zA-z]+[0-9]*|[0-9]{2,})$/
+// or regexTest = /^[a-z]([a-z]+\d*|[\d]{2,})$/i 
