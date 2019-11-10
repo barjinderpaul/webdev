@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input Form</title>
+    <link rel="stylesheet" href="revnov-form-css.css">
+    <script src="revnov-form-js.js"></script>
+</head>
+<body>
+    <div class="nav">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link"href="#">Contact Us</a>
+            <a class="nav-link" href="form.html">Fill form</a>
+    </div>
+    <br>
+    <div class="container">
+        Random headline here
+    </div>
+    <br>
+    <fieldset class="fieldset-container"> 
+        <legend>
+            Fill details
+        </legend>
+        <!-- <form  method="POST" > -->
+            <label for="username">Username :
+                <input type="text" name="username" id="username">
+            </label>
+            <br/><br>
+            <label for="password">Password :
+                <input type="password" name="passwd" id="passwd">
+            </label>
+            <br><br>
+            <label for="dob">Date of birth :
+                <input type="date" name="dob" id="dob">
+            </label>
+            <br><br>
+            <label for="gender">Gender :
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="others">Others
+            </label>
+            <br><br>
+            <label for="hobbies">Hobbies :
+                <input type="checkbox" name="hobbies" value="coding" checked>Coding
+                <input type="checkbox" name="hobbies" value="reading">Reading
+                <input type="checkbox" name="hobbies" value="gymming">Gymming
+            </label>
+            <br><br>
+            <button onclick="showanswers()">
+                Submit
+            </button>
+        <!-- </form> -->
+    </fieldset>
+    <br>
+    <fieldset class="fieldset-container" id='fieldset-answer'>
+        <legend>Answers submitted</legend>
+        <p id='fieldset-answer-ptag'>All answers will be displayed here</p>
+    </fieldset>
+</body>
+</html>

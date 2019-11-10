@@ -1,0 +1,49 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    padding: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    border: 1px white solid;
+    padding: 10px;
+}
+
+.container {
+    background-color: navy;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.fieldset-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    
+}
+
+}
+
+@media (min-width:0px) and (max-width:380px) {
+    .nav {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}   
+@media (min-width:380px) and (max-width:720px) {
+    .item {
+        width: 400px;
+        height: 400px;
+    }
+    #item1 {
+        color: pink;
+        height: 150px;
+        width: 150px;
+    }
+}
